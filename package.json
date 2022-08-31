@@ -11,6 +11,11 @@
       "import": "dist/index.mjs",
       "require": "dist/index.js",
       "types": "dist/index.d.ts"
+    },
+    "./traverse": {
+      "import": "dist/Traverse.mjs",
+      "require": "dist/Traverse.js",
+      "types": "dist/Traverse.d.ts"
     }
   },
   "author": "Sayakie <sayakie@kakao.com>",
@@ -49,12 +54,14 @@
     }
   },
   "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
     "tslib": "^2.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-angular": "^17.1.0",
     "@sapphire/ts-config": "^3.3.4",
+    "@types/lodash.clonedeep": "^4.5.7",
     "@types/node": "^18.6.1",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
