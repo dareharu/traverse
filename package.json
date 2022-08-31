@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/package.json",
-  "name": "@dareharu/node-template",
+  "name": "@dareharu/traverse-json",
   "version": "0.0.1",
-  "description": "A shared template to be used for Dareharu project.",
+  "description": "Outputs JSON by visiting, traversing, transforming, and applying every node in template JSON.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -18,10 +18,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dareharu/node-template.git"
+    "url": "git+https://github.com/dareharu/traverse-json.git"
   },
   "bugs": {
-    "url": "https://github.com/dareharu/node-template/issues"
+    "url": "https://github.com/dareharu/traverse-json/issues"
   },
   "engines": {
     "node": ">=v16.17.0",
