@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/package.json",
   "name": "@dareharu/traverse-json",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Outputs JSON by visiting, traversing, transforming, and applying every node in template JSON.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
