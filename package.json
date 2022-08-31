@@ -1,0 +1,81 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/package.json",
+  "name": "@dareharu/node-template",
+  "version": "0.0.1",
+  "description": "A shared template to be used for Dareharu project.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "dist/index.mjs",
+      "require": "dist/index.js",
+      "types": "dist/index.d.ts"
+    }
+  },
+  "author": "Sayakie <sayakie@kakao.com>",
+  "contributors": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dareharu/node-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dareharu/node-template/issues"
+  },
+  "engines": {
+    "node": ">=v16.17.0",
+    "pnpm": ">=7 <8"
+  },
+  "scripts": {
+    "lint": "eslint src test --ext ts --fix",
+    "format": "prettier --write {src,test}/**/*.ts",
+    "docs": "typedoc",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:ui": "vitest --ui",
+    "commit": "git-cz",
+    "cz": "git-cz",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "is-ci || husky install .github/husky"
+  },
+  "packageManager": "pnpm@^7.9.5",
+  "publishConfig": {
+    "access": "public"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "tslib": "^2.4.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-angular": "^17.1.0",
+    "@sapphire/ts-config": "^3.3.4",
+    "@types/node": "^18.6.1",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vitest/ui": "^0.22.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3",
+    "typedoc": "^0.23.11",
+    "typedoc-plugin-mdn-links": "^2.0.0",
+    "typescript": "^4.8.2",
+    "vitest": "^0.22.1"
+  }
+}

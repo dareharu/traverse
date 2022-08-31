@@ -1,0 +1,12 @@
+{
+  "extends": "@sapphire/ts-config/extra-strict",
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "ESNext",
+    "tsBuildInfoFile": ".tsbuildinfo",
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
+}
