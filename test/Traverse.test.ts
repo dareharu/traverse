@@ -1,4 +1,4 @@
-import { describe, expect, test } from 'vitest'
+import { beforeEach, describe, expect, test } from 'vitest'
 
 import { Traverse } from '@/Traverse'
 
@@ -38,5 +38,33 @@ describe(`#has()`, () => {
 
   test(`should be no exist getting "e"`, () => {
     expect(traverser.has(`e`)).toBe(false)
+  })
+})
+
+describe(`#set()`, () => {
+  let traverser: Traverse<Record<string, unknown>, Traverse.Options>
+
+  beforeEach(() => {
+    traverser = new Traverse({})
+  })
+
+  test(`should be match putting "e" to 7`, () => {
+    const [key, value] = [`e`, 7]
+
+    expect(traverser.has(key)).toBe(false)
+    expect(traverser.set(key, value)).toBe(value)
+
+    expect(traverser.has(key)).toBe(true)
+    expect(traverser.get(key)).toBe(value)
+  })
+
+  test(`should be match putting "f.g" to "value"`, () => {
+    const [key, value] = [`f,g`, `Reinhardt`]
+
+    expect(traverser.has(key)).toBe(false)
+    expect(traverser.set(key, value)).toBe(value)
+
+    expect(traverser.has(key)).toBe(true)
+    expect(traverser.get(key)).toBe(value)
   })
 })

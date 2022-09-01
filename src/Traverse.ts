@@ -81,6 +81,27 @@ export class Traverse<T extends Record<string, unknown>, O extends Traverse.Opti
   public has(node: string | string[]): boolean {
     return this.get(node) != null
   }
+
+  public set<U>(node: string | string[], value: U): U {
+    if (Array.isArray(node)) {
+      const flattenNodes = node.flat(Number.POSITIVE_INFINITY)
+      const lastNode = flattenNodes.pop()!
+      let lastVisitedNode = this.#value
+
+      for (const node of flattenNodes) {
+        if (!Reflect.has(lastVisitedNode, node)) {
+          Reflect.set(lastVisitedNode, node, {})
+        }
+
+        lastVisitedNode = Reflect.get(lastVisitedNode, node) as T
+      }
+
+      Reflect.set(lastVisitedNode, lastNode, value)
+      return value
+    }
+
+    return this.set(node.split(this.options.delimiter), value)
+  }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-namespace
