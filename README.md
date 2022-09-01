@@ -1,8 +1,8 @@
 <div align="center">
 
-# @dareharu/traverse-json
+# @dareharu/traverse
 
-**traverse-json**
+**traverse**
 
 Outputs JSON by traversing, applying, transforming, and using template JSON.
 
@@ -30,7 +30,7 @@ Outputs JSON by traversing, applying, transforming, and using template JSON.
 You can use the following command to install this package or feel free to replace `npm install` with your package manager of choice.
 
 ```sh
-$ npm install @dareharu/traverse-json
+$ npm install @dareharu/traverse
 ```
 
 ## 🌟 Usage

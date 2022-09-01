@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/package.json",
-  "name": "@dareharu/traverse-json",
+  "name": "@dareharu/traverse",
   "version": "0.1.0",
   "description": "Outputs JSON by visiting, traversing, transforming, and applying every node in template JSON.",
   "main": "dist/index.js",
@@ -23,10 +23,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dareharu/traverse-json.git"
+    "url": "git+https://github.com/dareharu/traverse.git"
   },
   "bugs": {
-    "url": "https://github.com/dareharu/traverse-json/issues"
+    "url": "https://github.com/dareharu/traverse/issues"
   },
   "engines": {
     "node": ">=v16.17.0",
